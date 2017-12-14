@@ -1,0 +1,26 @@
+{
+  "name": "tglogger",
+  "description": "Telegram Bot Logger",
+  "version": "0.1.0",
+  "author": {
+    "name": "johnnykramer",
+    "email": "kuzmychev@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnykramer/tglogger"
+  },
+  "homepage": "https://github.com/johnnykramer/tglogger",
+  "keywords": [
+    "telegram",
+    "framework",
+    "log",
+    "logger",
+    "bot"
+  ],
+  "dependencies": {
+    "lowdb": "^1.0.0",
+    "node-telegram-bot-api": "^0.29.0"
+  }
+}
