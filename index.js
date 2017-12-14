@@ -16,7 +16,7 @@ class TgLogger {
       if (typeof msg.chat.type == 'channel') {
         return console.log('Channels not supported yet...');
       }
-      if (this.status == false) {
+      if (!this.status || this.status == false) {
         this.db.set('chatId', msg.chat.id)
           .set('status', true)
           .write()
