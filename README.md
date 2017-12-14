@@ -22,3 +22,13 @@ Send the bot command `/start` to bot or just write something to the group/superg
     tg.failed('_Lorem_ *ipsum* \`dolor\`.');
     tg.success();
     tg.success('_Lorem_ *ipsum* \`dolor\`.');
+
+## Commands
+
+    /connect
+
+Use to connect bot to the chat/group/supergroup.
+
+    /disconnect
+
+Use to disconnect from the chat/group/supergroup.
