@@ -4,12 +4,18 @@ const FileSync = require('lowdb/adapters/FileSync');
 const h = require('./helpers');
 
 class TgLogger {
-  constructor(token) {
+  constructor(...args) {
+    const [token = process.env.TELEGRAM_LOG_TOKEN] = args.filter(
+      a => typeof a === "string"
+    )
+    const [chatId = parseInt(process.env.TELEGRAM_LOG_CHAT_ID)] = args.filter(
+      a => typeof a === "number"
+    )
     if (!token) { return console.log('token error'); }
     this.bot = new TelegramBot(token, {polling: true});
     this.adapter = new FileSync('db.json');
     this.db = low(this.adapter);
-    this.chatId = this.db.get('chatId').value();
+    this.chatId = chatId || this.db.get('chatId').value();
     this.status = this.db.get('status').value();
 
     this.bot.onText(/\/connect/, (msg) => {
