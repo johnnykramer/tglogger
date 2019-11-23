@@ -2,6 +2,8 @@
 Good for logging your actions to [Telegram](https://telegram.org) chat/group/supergroup.
 Now supports sending `String` type of messages only (also supports Markdown).
 
+## Repo is abandoned. If you want to Make Repo Great Again — you still can fork it.
+
 ## Install
 
 1. Create bot and get bot token from [@botfather](https://t.me/botfather);
